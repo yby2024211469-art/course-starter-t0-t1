@@ -1,0 +1,97 @@
+{"event": "capture_start", "time": "2026-10-10T14:36:11.126173+08:00", "elapsed_s": 0.023, "stability": true, "port": "COM9"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:11.427806+08:00", "elapsed_s": 0.324, "text": "msh />msh />"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:11.623322+08:00", "elapsed_s": 0.519, "text": "S"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:11.623780+08:00", "elapsed_s": 0.52, "text": "FBL\n"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.577345+08:00", "elapsed_s": 2.473, "text": "S"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.577778+08:00", "elapsed_s": 2.474, "text": "erial:c2,Chip:4,Package:3,Rev:3"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.578505+08:00", "elapsed_s": 2.474, "text": "  Reason:00000000\r\r\n\r\n \\ | /\r\n- SiFli Corporation\r\n / | \\     bu"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.578740+08:00", "elapsed_s": 2.474, "text": "ild on Oct 10 2026, 2.5.1 build "}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.578932+08:00", "elapsed_s": 2.475, "text": "421126d9\r\n 2020 - 2022 Copyright"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.580033+08:00", "elapsed_s": 2.476, "text": " "}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.580156+08:00", "elapsed_s": 2.476, "text": "by SiFli team\r\naw32001_init ok,"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.580464+08:00", "elapsed_s": 2.476, "text": " "}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.580608+08:00", "elapsed_s": 2.476, "text": " time consum: 0.00 ms.\r\nmount /"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.581069+08:00", "elapsed_s": 2.477, "text": "d"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.581224+08:00", "elapsed_s": 2.477, "text": "ev sucess\r\n[I/drv.rtc] PSCLR=0x"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.581406+08:00", "elapsed_s": 2.477, "text": "8"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.581507+08:00", "elapsed_s": 2.477, "text": "0000100 DivAI=128 DivAF=0 B=256"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.581774+08:00", "elapsed_s": 2.477, "text": "\r"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.581871+08:00", "elapsed_s": 2.478, "text": "\n[I/drv.rtc] RTC use LXT RTC_CR"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.582125+08:00", "elapsed_s": 2.478, "text": "="}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.582251+08:00", "elapsed_s": 2.478, "text": "00000001\r\n\r\n[I/drv.rtc] Init RT"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.583589+08:00", "elapsed_s": 2.479, "text": "C"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.583734+08:00", "elapsed_s": 2.479, "text": ", wake = 1\r\n\r\n"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.586320+08:00", "elapsed_s": 2.482, "text": "["}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.586533+08:00", "elapsed_s": 2.482, "text": "I/drv.audprc] init 00 ADC_PATH_"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.586648+08:00", "elapsed_s": 2.482, "text": "CFG0 0x606\r\n\r\n[I/drv.audprc] HAL"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.587027+08:00", "elapsed_s": 2.483, "text": "_"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.587147+08:00", "elapsed_s": 2.483, "text": "AUDPRC_Init res 0\r\n\r\n[I/drv.aud"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.587362+08:00", "elapsed_s": 2.483, "text": "c"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.587461+08:00", "elapsed_s": 2.483, "text": "odec] HAL_AUDCODEC_Init res 0\r\n"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.587748+08:00", "elapsed_s": 2.483, "text": "\r"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.587844+08:00", "elapsed_s": 2.484, "text": "\n[I/drv.rgb] rgbled register su"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.588101+08:00", "elapsed_s": 2.484, "text": "c"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.588218+08:00", "elapsed_s": 2.484, "text": "cess, supporting 1 LEDs\r\n\u001b[32m["}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.588452+08:00", "elapsed_s": 2.484, "text": "I"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.588601+08:00", "elapsed_s": 2.484, "text": "/TOUCH] Regist touch screen dri"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.588824+08:00", "elapsed_s": 2.485, "text": "v"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.588921+08:00", "elapsed_s": 2.485, "text": "er, probe=1202740d \u001b[0m\r\n\u001b[32;2"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.589233+08:00", "elapsed_s": 2.485, "text": "2"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.589331+08:00", "elapsed_s": 2.485, "text": "m[I/FAL] Flash Abstraction Laye"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.589518+08:00", "elapsed_s": 2.485, "text": "r"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.589613+08:00", "elapsed_s": 2.485, "text": " (V0.5.99) initialize success.\u001b"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.589885+08:00", "elapsed_s": 2.486, "text": "["}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.589975+08:00", "elapsed_s": 2.486, "text": "0m\r\n\u001b[32;22m[I/FAL] The FAL MTD"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.590233+08:00", "elapsed_s": 2.486, "text": " "}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.590328+08:00", "elapsed_s": 2.486, "text": "NOR device (dfu) created succes"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.590600+08:00", "elapsed_s": 2.486, "text": "s"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.590686+08:00", "elapsed_s": 2.486, "text": "fully\u001b[0m\r\n\u001b[32;22m[I/FAL] The "}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.590979+08:00", "elapsed_s": 2.487, "text": "F"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.591121+08:00", "elapsed_s": 2.487, "text": "AL MTD NOR device (ble) created"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.592390+08:00", "elapsed_s": 2.488, "text": " "}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.592541+08:00", "elapsed_s": 2.488, "text": "successfully\u001b[0m\r\n"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.593868+08:00", "elapsed_s": 2.49, "text": "c"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.593973+08:00", "elapsed_s": 2.49, "text": "all par CFG1(3313)\r\r\nfc 9, xtal"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.594423+08:00", "elapsed_s": 2.49, "text": " "}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.594520+08:00", "elapsed_s": 2.49, "text": "2000, pll 2096\r\r\ncall par CFG1("}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.594787+08:00", "elapsed_s": 2.491, "text": "3"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.594923+08:00", "elapsed_s": 2.491, "text": "313)\r\r\nfc 7, xtal 2000, pll 168"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.595680+08:00", "elapsed_s": 2.491, "text": "2"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.595821+08:00", "elapsed_s": 2.492, "text": "\r\r\n\r\n[course_starter] v0.2.0-t1"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.596030+08:00", "elapsed_s": 2.492, "text": " "}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.596150+08:00", "elapsed_s": 2.492, "text": "boot ok\r\nHello world!\r\n[t1:self"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.596371+08:00", "elapsed_s": 2.492, "text": "t"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.596461+08:00", "elapsed_s": 2.492, "text": "est] key_edge=PASS color_cycle="}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.597626+08:00", "elapsed_s": 2.493, "text": "P"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.597737+08:00", "elapsed_s": 2.493, "text": "ASS\r\n"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.602910+08:00", "elapsed_s": 2.499, "text": "m"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.603114+08:00", "elapsed_s": 2.499, "text": "sh />"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.604401+08:00", "elapsed_s": 2.5, "text": "["}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.604530+08:00", "elapsed_s": 2.5, "text": "t1] ready pin=34 active=1 poll_"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.604731+08:00", "elapsed_s": 2.5, "text": "m"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.604909+08:00", "elapsed_s": 2.501, "text": "s=5 debounce=off\r\n[t1] count=0 "}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.606108+08:00", "elapsed_s": 2.502, "text": "r"}
+{"event": "serial_rx", "time": "2026-10-10T14:36:13.606262+08:00", "elapsed_s": 2.502, "text": "gb -> red\r\n"}
+{"event": "firmware_ready", "time": "2026-10-10T14:36:13.606329+08:00", "elapsed_s": 2.502}
+{"event": "idle_complete", "time": "2026-10-10T14:39:13.668641+08:00", "elapsed_s": 182.564, "idle_s": 180.062}
+{"event": "serial_rx", "time": "2026-10-10T14:39:37.569577+08:00", "elapsed_s": 206.465, "text": "["}
+{"event": "serial_rx", "time": "2026-10-10T14:39:37.569958+08:00", "elapsed_s": 206.466, "text": "t1] count=1 rgb -> green\r\n"}
+{"event": "serial_rx", "time": "2026-10-10T14:39:38.465885+08:00", "elapsed_s": 207.362, "text": "["}
+{"event": "serial_rx", "time": "2026-10-10T14:39:38.466354+08:00", "elapsed_s": 207.362, "text": "t1] count=2 rgb -> blue\r\n"}
+{"event": "serial_rx", "time": "2026-10-10T14:39:39.220226+08:00", "elapsed_s": 208.116, "text": "["}
+{"event": "serial_rx", "time": "2026-10-10T14:39:39.220551+08:00", "elapsed_s": 208.116, "text": "t1] count=3 rgb -> red\r\n"}
+{"event": "serial_rx", "time": "2026-10-10T14:39:39.830001+08:00", "elapsed_s": 208.726, "text": "["}
+{"event": "serial_rx", "time": "2026-10-10T14:39:39.830289+08:00", "elapsed_s": 208.726, "text": "t1] count=4 rgb -> green\r\n"}
+{"event": "serial_rx", "time": "2026-10-10T14:39:40.450354+08:00", "elapsed_s": 209.346, "text": "["}
+{"event": "serial_rx", "time": "2026-10-10T14:39:40.450736+08:00", "elapsed_s": 209.346, "text": "t1] count=5 rgb -> blue\r\n"}
+{"event": "serial_rx", "time": "2026-10-10T14:39:41.089891+08:00", "elapsed_s": 209.986, "text": "["}
+{"event": "serial_rx", "time": "2026-10-10T14:39:41.090248+08:00", "elapsed_s": 209.986, "text": "t1] count=6 rgb -> red\r\n"}
+{"event": "serial_rx", "time": "2026-10-10T14:39:41.723979+08:00", "elapsed_s": 210.62, "text": "["}
+{"event": "serial_rx", "time": "2026-10-10T14:39:41.724277+08:00", "elapsed_s": 210.62, "text": "t1] count=7 rgb -> green\r\n"}
+{"event": "serial_rx", "time": "2026-10-10T14:39:42.594416+08:00", "elapsed_s": 211.49, "text": "["}
+{"event": "serial_rx", "time": "2026-10-10T14:39:42.594717+08:00", "elapsed_s": 211.49, "text": "t1] count=8 rgb -> blue\r\n"}
+{"event": "serial_rx", "time": "2026-10-10T14:39:43.349680+08:00", "elapsed_s": 212.245, "text": "["}
+{"event": "serial_rx", "time": "2026-10-10T14:39:43.350024+08:00", "elapsed_s": 212.246, "text": "t1] count=9 rgb -> red\r\n"}
+{"event": "serial_rx", "time": "2026-10-10T14:39:44.049632+08:00", "elapsed_s": 212.945, "text": "["}
+{"event": "serial_rx", "time": "2026-10-10T14:39:44.050004+08:00", "elapsed_s": 212.946, "text": "t1] count=10 rgb -> green\r\n"}
+{"event": "capture_end", "time": "2026-10-10T14:40:13.634757+08:00", "elapsed_s": 242.531}
