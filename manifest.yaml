@@ -67,6 +67,12 @@ physical_verification:
     evidence_path: "evidence/T1/README.md"
     agent_conclusion: "原始日志计数1至21连续、颜色顺序正确、最终红色；殷白玉确认没有重复和漏响应、完全一致。视频收存但未由Codex解码检查。20次轮次符合预期，按计划追加30次及3分钟运行待执行。时间为采集开始时间。"
 
+  - item: "T1 追加30次采集"
+    required_action: "殷白玉执行追加30次，回传日志截图和视频"
+    executed_at: "2026-10-10T14:30:15+08:00"
+    evidence_path: "evidence/T1/README.md"
+    agent_conclusion: "原始日志连续1至30、颜色循环正确、最终红色；本轮实际按下数及灯光一致性待操作人确认，视频未由Codex解码。时间为采集开始时间。"
+
 test_results:
   - test_id: "T0-BOOT"
     description: "T0 编译、烧录、启动与 RGB 循环"
@@ -103,7 +109,8 @@ test_results:
     evidence_path: "evidence/T1/README.md"
 
 known_issues:
-  - "T1 的20次短按加1次按住轮次符合预期；计划追加30次及3分钟稳定运行待执行，训练未全部验收"
+  - "T1 追加30次日志符合预期，本轮物理次数与灯光待确认；总结和交接尚未完成"
+  - "3分钟稳定运行为补充用例而非老师明确规定时长，仍未执行；未标为通过"
   - "视频保存在本地证据目录，不由 Git 跟踪，交付时需另附文件"
   - "完整原始 AI 会话导出尚未提供，精确模型标识未知"
   - "组长蔡融汉，成员殷白玉、郑瑞杭、吴周锦、赵志浩；组号、其他学号及分工未定"
