@@ -40,7 +40,7 @@ design:
 
 code:
   repo_url: "D:/sifli/projects/course_starter（本地仓库，未配置远程）"
-  commit_range: "<起始commit..结束commit，对应本次里程碑>"
+  commit_range: "bc40051..7371872（T0 及 T1 实现；后续实测待追加）"
 
 physical_verification:
   # 每一个物理验证节点都要有对应记录，节点类型见配套文档《Agent协作开发与评审机制》第三节表格
@@ -63,8 +63,15 @@ test_results:
     pass: true
     evidence_path: "evidence/T0/README.md"
 
+  - test_id: "TC-003"
+    description: "T1 编译及容量检查"
+    expected: "构建成功，ROM/RAM 不超出板型容量"
+    actual: "构建返回0；main.bin 297932 B，ROM 323805/8388608 B，RAM 56676/523264 B"
+    pass: true
+    evidence_path: "evidence/T1/build_log_20261010.txt"
+
 known_issues:
-  - "T1 代码及板端自检尚未执行，不沿用 T0 的通过结论"
+  - "T1 代码已编译通过，板端自检和按键实测待执行，不沿用 T0 的通过结论"
   - "视频保存在本地证据目录，不由 Git 跟踪，交付时需另附文件"
   - "完整原始 AI 会话导出尚未提供，精确模型标识未知"
   - "组长蔡融汉，成员殷白玉、郑瑞杭、吴周锦、赵志浩；组号、其他学号及分工未定"
