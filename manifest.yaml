@@ -13,14 +13,14 @@
 # ============================================================
 
 submission:
-  student_id: "<学号，例如 S2026001>"
-  student_name: "<姓名>"
+  student_id: "2024211469"
+  student_name: "殷白玉"
   group_id: "<组别，例如 G3>"
-  milestone: "<里程碑名称，例如 阶段4-AI语音集成 / Capstone-检查点2 / Capstone-终版>"
+  milestone: "T0 入门训练（收尾中）"
   submitted_at: "<ISO时间戳，例如 2026-11-03T21:40:00+08:00>"
 
 dev_agent:
-  tool: "<使用的agent工具，例如 Claude Code>"
+  tool: "Codex"
   model: "<模型版本，例如 claude-sonnet-5，请据实填写，不要凭记忆猜测>"
   session_log_path: "<完整会话记录文件路径，必须是原始导出，不可编辑>"
   session_log_hash: "<可选：会话记录文件的哈希值，用于防止事后篡改>"
@@ -33,10 +33,10 @@ design:
   architecture_doc_path: "<方案设计说明路径，默认 docs/02-方案设计说明.md>"
   key_decisions:
     # 每一条关键决策都要写清楚：决策内容 / 考虑过的备选方案 / 选择理由 / 谁做的最终决定
-    - decision: "<例如：选择BLE而非WiFi做数据同步>"
-      alternatives_considered: "<例如：曾考虑过用SD卡离线导出，因为使用场景需要实时同步而放弃>"
-      rationale: "<为什么最终这么选，写具体理由，不要只写'效果更好'>"
-      decided_by: "<agent建议+学生确认 / 学生主导 / 纯agent自动决定（不建议用于关键决策）>"
+    - decision: "T1 使用 5ms 周期轮询读取 KEY1"
+      alternatives_considered: "5ms 轮询或 GPIO 中断；中断响应更直接，但处理较复杂"
+      rationale: "训练功能较小，轮询代码简单，便于观察和调试"
+      decided_by: "Codex 提供备选；殷白玉明确选择轮询"
 
 code:
   repo_url: "<git仓库地址>"
@@ -44,11 +44,11 @@ code:
 
 physical_verification:
   # 每一个物理验证节点都要有对应记录，节点类型见配套文档《Agent协作开发与评审机制》第三节表格
-  - item: "<验证项名称，例如：固件烧录与串口启动log>"
-    required_action: "<agent当时要求学生具体做什么>"
-    executed_at: "<学生实际执行的时间戳>"
-    evidence_path: "<原始证据文件路径：照片/视频/日志/示波器截图>"
-    agent_conclusion: "<agent基于该证据得出的结论，例如：启动正常，IMU初始化成功>"
+  - item: "T0 烧录与 RGB 三色循环"
+    required_action: "殷白玉运行烧录脚本，观察三色循环，回传截图和视频"
+    executed_at: "2026-10-10T13:37:01+08:00"
+    evidence_path: "evidence/T0/README.md"
+    agent_conclusion: "烧录工具正常结束；殷白玉观察并确认 RGB 循环通过，串口记录有对应输出。视频由学生确认，Codex 未逐帧检查。时间为烧录日志文件记录的开始时间。尚缺 boot ok 与 Hello world 启动行。"
 
 test_results:
   - test_id: "<测试编号，例如 TC-01>"
@@ -59,17 +59,19 @@ test_results:
     evidence_path: "<对应的原始数据/截图路径>"
 
 known_issues:
-  - "<已知问题1，真实项目通常都有未解决或有局限性的地方，主动说明比隐瞒更可信>"
+  - "T0 运行日志已采集，首次启动的 boot ok 与 Hello world 尚未取证"
+  - "视频保存在本地证据目录，不由 Git 跟踪，交付时需另附文件"
+  - "完整原始 AI 会话导出尚未提供，精确模型标识未知"
+  - "组长蔡融汉，成员殷白玉、郑瑞杭、吴周锦、赵志浩；组号、其他学号及分工未定"
 
 self_review: |
-  <agent生成的自我复盘，包括：本次里程碑完成度如何、哪些地方agent自己也不确定、
-  哪些决策是在学生介入/纠正之后才修改的。建议由agent在里程碑结束时自动生成，
-  不建议学生代写。>
+  编译、烧录、三色运行日志和学生视频已留存。脚本两次报错由学生反馈后修复。
+  T0 尚需补启动行、正式提交和进度登记，不标记全部完成。
 
 human_checkpoints:
   # 用于区分"学生自己做的决定"和"agent建议、学生只是同意"
-  - decision_point: "<例如：是否采用非线性PWM映射>"
-    student_confirmation: "<学生对该决策的确认说明，最好包含'为什么认可/为什么修改'的具体理由>"
+  - decision_point: "T1 选择轮询还是 GPIO 中断"
+    student_confirmation: "殷白玉选择每 5 毫秒轮询，便于调试"
 
 # ============================================================
 # 以下为字段填写示例（仅供参考，提交时请删除本示例区块）
