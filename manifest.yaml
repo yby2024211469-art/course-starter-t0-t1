@@ -15,19 +15,19 @@
 submission:
   student_id: "2024211469"
   student_name: "殷白玉"
-  group_id: "<组别，例如 G3>"
-  milestone: "T0 启动验证已完成，T1 开发中"
-  submitted_at: "<ISO时间戳，例如 2026-11-03T21:40:00+08:00>"
+  group_id: "未分配（本人确认；按学号提交个人训练）"
+  milestone: "T0/T1 入门训练收尾"
+  submitted_at: "2026-10-10T14:54:14+08:00"
 
 dev_agent:
   tool: "Codex"
-  model: "<模型版本，例如 claude-sonnet-5，请据实填写，不要凭记忆猜测>"
-  session_log_path: "<完整会话记录文件路径，必须是原始导出，不可编辑>"
-  session_log_hash: "<可选：会话记录文件的哈希值，用于防止事后篡改>"
+  model: "gpt-5.6-sol / gpt-6.1-sol（原始会话turn_context元数据；收尾为gpt-6.1-sol）"
+  session_log_path: "logs/session_20261010_T0_T1.jsonl"
+  session_log_hash: "0DF5B49EC6C298573093A3F3BC285B464FED6CF9EFB9DD8ACEAD42A508D54934"
 
 requirements:
   prd_path: "docs/01-需求规格说明.md"
-  hardware_constraints_ref: "<引用的硬件规格文档，例如黄山派硬件手册链接或本地副本路径>"
+  hardware_constraints_ref: "docs/01-需求规格说明.md 第5节；SDK v2.5.1 customer/boards/sf32lb52-lchspi-ulp/hcpu/board.conf"
 
 design:
   architecture_doc_path: "docs/02-方案设计说明.md"
@@ -40,7 +40,7 @@ design:
 
 code:
   repo_url: "D:/sifli/projects/course_starter（本地仓库，未配置远程）"
-  commit_range: "bc40051..7371872（T0 及 T1 实现；后续实测待追加）"
+  commit_range: "bc40051..T1-done（T0/T1实现、实测及交接；最终检查通过后建立标签）"
 
 physical_verification:
   # 每一个物理验证节点都要有对应记录，节点类型见配套文档《Agent协作开发与评审机制》第三节表格
@@ -59,19 +59,19 @@ physical_verification:
     required_action: "殷白玉烧录T1，运行采集脚本，回传串口截图和操作视频"
     executed_at: "2026-10-10T14:17:39+08:00"
     evidence_path: "evidence/T1/README.md"
-    agent_conclusion: "烧录脚本正常结束；原始日志显示v0.2.0-t1启动、两项自检PASS、计数1至10连续且颜色顺序正确。视频已收存但Codex无法解码，物理按下次数及灯光一致性待操作人确认。时间为日志采集开始时间。"
+    agent_conclusion: "烧录脚本正常结束；原始日志显示v0.2.0-t1启动、两项自检PASS、计数1至10连续且颜色顺序正确。视频已收存但Codex无法解码，物理按下次数及灯光一致性已由殷白玉确认。时间为日志采集开始时间。"
 
   - item: "T1 第二轮20次短按、1次按住及5秒保持"
     required_action: "殷白玉执行按键及保持测试，回传截图和视频，确认物理次数与灯光"
     executed_at: "2026-10-10T14:24:00+08:00"
     evidence_path: "evidence/T1/README.md"
-    agent_conclusion: "原始日志计数1至21连续、颜色顺序正确、最终红色；殷白玉确认没有重复和漏响应、完全一致。视频收存但未由Codex解码检查。20次轮次符合预期，按计划追加30次及3分钟运行待执行。时间为采集开始时间。"
+    agent_conclusion: "原始日志计数1至21连续、颜色顺序正确、最终红色；殷白玉确认没有重复和漏响应、完全一致。视频收存但未由Codex解码检查。后续追加30次及3分钟测试记录见下方节点。时间为采集开始时间。"
 
   - item: "T1 追加30次采集"
     required_action: "殷白玉执行追加30次，回传日志截图和视频"
     executed_at: "2026-10-10T14:30:15+08:00"
     evidence_path: "evidence/T1/README.md"
-    agent_conclusion: "原始日志连续1至30、颜色循环正确、最终红色；本轮实际按下数及灯光一致性待操作人确认，视频未由Codex解码。时间为采集开始时间。"
+    agent_conclusion: "原始日志连续1至30、颜色循环正确、最终红色；殷白玉随后确认完全无误，实际次数与灯光一致。视频未由Codex解码。时间为采集开始时间，不冒充后续确认时间。"
 
   - item: "T1 3分钟稳定运行补充验证"
     required_action: "殷白玉运行稳定采集，等待180秒后短按10次，回传截图视频及观察结果"
@@ -121,38 +121,25 @@ test_results:
     pass: true
     evidence_path: "evidence/T1/README.md"
 
+  - test_id: "TC-002"
+    description: "20次混合按键、按住及追加30次"
+    expected: "切换数等于按下数，按住及释放不额外切换"
+    actual: "21次及追加30次日志连续正确，殷白玉确认物理次数与灯光完全一致，未复现重复或遗漏"
+    pass: true
+    evidence_path: "evidence/T1/README.md"
+
 known_issues:
-  - "T1 追加30次日志符合预期，本轮物理次数与灯光待确认；总结和交接尚未完成"
+  - "第一版未消抖，有限次测试未复现问题，不代表消抖风险消除；极短脉冲也可能漏采"
   - "3分钟补充稳定性测试已通过，不代表长期稳定性验证"
   - "视频保存在本地证据目录，不由 Git 跟踪，交付时需另附文件"
-  - "完整原始 AI 会话导出尚未提供，精确模型标识未知"
+  - "原始会话以本地原始JSONL的未改写快照保存，快照截至2026-10-10 14:54；此后收尾过程见Git和开发日志，不冒充整段聊天最终导出"
   - "组长蔡融汉，成员殷白玉、郑瑞杭、吴周锦、赵志浩；组号、其他学号及分工未定"
 
 self_review: |
   编译、烧录、三色运行日志和学生视频已留存。脚本两次报错由学生反馈后修复。
-  T0 已补启动行并保存规范提交。T1 需求、设计和测试计划已确认，功能结果须另行实测。
+  T0已补启动行。T1六个用例通过，物理结果由本人确认并留证，第一版未消抖的风险如实保留。个人文字经本人修改确认后填入总结；模型来自原始会话元数据，组号按未分配记录。
 
 human_checkpoints:
   # 用于区分"学生自己做的决定"和"agent建议、学生只是同意"
   - decision_point: "T1 选择轮询还是 GPIO 中断"
     student_confirmation: "殷白玉选择每 5 毫秒轮询，便于调试"
-
-# ============================================================
-# 以下为字段填写示例（仅供参考，提交时请删除本示例区块）
-# ============================================================
-# submission:
-#   student_id: "S2026007"
-#   student_name: "李四"
-#   group_id: "G3"
-#   milestone: "阶段4-AI语音集成"
-#   submitted_at: "2026-11-03T21:40:00+08:00"
-# dev_agent:
-#   tool: "Claude Code"
-#   model: "claude-sonnet-5"
-#   session_log_path: "logs/session_2026-11-03.jsonl"
-# physical_verification:
-#   - item: "蓝牙BT PAN联网"
-#     required_action: "打开手机蓝牙个人热点，尝试与开发板配对并观察是否能访问外网"
-#     executed_at: "2026-11-03T20:15:00+08:00"
-#     evidence_path: "evidence/bt_pan_connect_log.png"
-#     agent_conclusion: "配对成功，ping通外部服务器，联网延迟约800ms"
