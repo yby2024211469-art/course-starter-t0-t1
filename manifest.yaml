@@ -16,7 +16,7 @@ submission:
   student_id: "2024211469"
   student_name: "殷白玉"
   group_id: "<组别，例如 G3>"
-  milestone: "T0 入门训练（收尾中）"
+  milestone: "T0 启动验证已完成，T1 开发中"
   submitted_at: "<ISO时间戳，例如 2026-11-03T21:40:00+08:00>"
 
 dev_agent:
@@ -26,11 +26,11 @@ dev_agent:
   session_log_hash: "<可选：会话记录文件的哈希值，用于防止事后篡改>"
 
 requirements:
-  prd_path: "<需求规格说明路径，默认 docs/01-需求规格说明.md>"
+  prd_path: "docs/01-需求规格说明.md"
   hardware_constraints_ref: "<引用的硬件规格文档，例如黄山派硬件手册链接或本地副本路径>"
 
 design:
-  architecture_doc_path: "<方案设计说明路径，默认 docs/02-方案设计说明.md>"
+  architecture_doc_path: "docs/02-方案设计说明.md"
   key_decisions:
     # 每一条关键决策都要写清楚：决策内容 / 考虑过的备选方案 / 选择理由 / 谁做的最终决定
     - decision: "T1 使用 5ms 周期轮询读取 KEY1"
@@ -39,7 +39,7 @@ design:
       decided_by: "Codex 提供备选；殷白玉明确选择轮询"
 
 code:
-  repo_url: "<git仓库地址>"
+  repo_url: "D:/sifli/projects/course_starter（本地仓库，未配置远程）"
   commit_range: "<起始commit..结束commit，对应本次里程碑>"
 
 physical_verification:
@@ -48,25 +48,30 @@ physical_verification:
     required_action: "殷白玉运行烧录脚本，观察三色循环，回传截图和视频"
     executed_at: "2026-10-10T13:37:01+08:00"
     evidence_path: "evidence/T0/README.md"
-    agent_conclusion: "烧录工具正常结束；殷白玉观察并确认 RGB 循环通过，串口记录有对应输出。视频由学生确认，Codex 未逐帧检查。时间为烧录日志文件记录的开始时间。尚缺 boot ok 与 Hello world 启动行。"
+    agent_conclusion: "烧录工具正常结束；殷白玉观察并确认 RGB 循环通过，串口记录有对应输出。视频由学生确认，Codex 未逐帧检查。时间为烧录日志文件记录的开始时间。"
+  - item: "T0 串口启动日志"
+    required_action: "殷白玉运行启动采集脚本，允许一次软件重启并回传结果截图"
+    executed_at: "2026-10-10T14:06:20+08:00"
+    evidence_path: "evidence/T0/boot_log_20261010_140620.txt"
+    agent_conclusion: "原始日志包含 v0.1.0 boot ok、Hello world! 和三色循环；截图与日志一致。时间为日志采集开始时间。"
 
 test_results:
-  - test_id: "<测试编号，例如 TC-01>"
-    description: "<测试内容简述>"
-    expected: "<预期结果>"
-    actual: "<实测结果>"
-    pass: <true 或 false>
-    evidence_path: "<对应的原始数据/截图路径>"
+  - test_id: "T0-BOOT"
+    description: "T0 编译、烧录、启动与 RGB 循环"
+    expected: "正常启动，打印 boot ok、Hello world!，RGB 红绿蓝循环"
+    actual: "原始日志符合预期，殷白玉观察灯光并提供视频确认"
+    pass: true
+    evidence_path: "evidence/T0/README.md"
 
 known_issues:
-  - "T0 运行日志已采集，首次启动的 boot ok 与 Hello world 尚未取证"
+  - "T1 代码及板端自检尚未执行，不沿用 T0 的通过结论"
   - "视频保存在本地证据目录，不由 Git 跟踪，交付时需另附文件"
   - "完整原始 AI 会话导出尚未提供，精确模型标识未知"
   - "组长蔡融汉，成员殷白玉、郑瑞杭、吴周锦、赵志浩；组号、其他学号及分工未定"
 
 self_review: |
   编译、烧录、三色运行日志和学生视频已留存。脚本两次报错由学生反馈后修复。
-  T0 尚需补启动行、正式提交和进度登记，不标记全部完成。
+  T0 已补启动行并保存规范提交。T1 需求、设计和测试计划已确认，功能结果须另行实测。
 
 human_checkpoints:
   # 用于区分"学生自己做的决定"和"agent建议、学生只是同意"
