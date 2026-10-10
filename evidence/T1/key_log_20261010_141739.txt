@@ -1,0 +1,45 @@
+msh />msh />SFBL
+Serial:c2,Chip:4,Package:3,Rev:3  Reason:00000000
+
+ \ | /
+- SiFli Corporation
+ / | \     build on Oct 10 2026, 2.5.1 build 421126d9
+ 2020 - 2022 Copyright by SiFli team
+aw32001_init ok,  time consum: 0.00 ms.
+mount /dev sucess
+[I/drv.rtc] PSCLR=0x80000100 DivAI=128 DivAF=0 B=256
+[I/drv.rtc] RTC use LXT RTC_CR=00000001
+
+[I/drv.rtc] Init RTC, wake = 1
+
+[I/drv.audprc] init 00 ADC_PATH_CFG0 0x606
+
+[I/drv.audprc] HAL_AUDPRC_Init res 0
+
+[I/drv.audcodec] HAL_AUDCODEC_Init res 0
+
+[I/drv.rgb] rgbled register success, supporting 1 LEDs
+[32m[I/TOUCH] Regist touch screen driver, probe=1202740d [0m
+[32;22m[I/FAL] Flash Abstraction Layer (V0.5.99) initialize success.[0m
+[32;22m[I/FAL] The FAL MTD NOR device (dfu) created successfully[0m
+[32;22m[I/FAL] The FAL MTD NOR device (ble) created successfully[0m
+call par CFG1(3313)
+fc 9, xtal 2000, pll 2099
+call par CFG1(3313)
+fc 7, xtal 2000, pll 1684
+
+[course_starter] v0.2.0-t1 boot ok
+Hello world!
+[t1:selftest] key_edge=PASS color_cycle=PASS
+msh />[t1] ready pin=34 active=1 poll_ms=5 debounce=off
+[t1] count=0 rgb -> red
+[t1] count=1 rgb -> green
+[t1] count=2 rgb -> blue
+[t1] count=3 rgb -> red
+[t1] count=4 rgb -> green
+[t1] count=5 rgb -> blue
+[t1] count=6 rgb -> red
+[t1] count=7 rgb -> green
+[t1] count=8 rgb -> blue
+[t1] count=9 rgb -> red
+[t1] count=10 rgb -> green
